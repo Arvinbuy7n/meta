@@ -73245,32 +73245,35 @@ const initValue = [
   }
 ]
 
-export default function Home() {
-  const [changeColor, setChangeColor] = useState('blue')
-  const [data, setData] = useState(initValue)
-
-  const memoizedList = useMemo(() => {
-    return data.map((item) => {
-      return <div key={item.id} className="flex w-full text-white">
-        {item.name}
-      </div>
-    });
-  }, [data])
+// export default function Home() {
+//   const [changeColor, setChangeColor] = useState('blue')
+//   const [data, setData] = useState(initValue)
 
 
-  const handleChange = (e) => {
-    setChangeColor(e.target.value)
-  }
+//   const memoizedList = useMemo(() => {
+//     return data.map((item) => {
+//       return <div key={item.id} className="flex w-full text-white">
+//         {item.name}
+//       </div>
+//     });
+//   }, [data])
 
-  return <div className="flex flex-col w-screen bg-black justify-center ">
-    <div className="flex w-[450px] h-[500px] bg-white justify-center items-center" style={{ backgroundColor: changeColor }}>
-      <input type="color" value="#ff0000" onChange={handleChange} />
-    </div>
-    <div className="flex text-white">
-      {memoizedList}
-    </div>
-  </div>
-}
+
+//   const handleChange = (e) => {
+//     setChangeColor(e.target.value)
+//   }
+
+//   return <div className="flex flex-col w-full h-fit justify-center items-center">
+//     <div className="flex w-[450px] h-[500px]  justify-center items-center" style={{ backgroundColor: changeColor }}>
+//       <input type="color" value="#ff0000" onChange={handleChange} />
+//     </div>
+//     <div className="flex w-fit h-[1000px] bg-black">
+//       {memoizedList}
+//     </div>
+//   </div>
+// }
+
+
 
 
 
@@ -73292,6 +73295,7 @@ export default function Home() {
 
 
 
+
 // const [isStopped, setIsStopped] = useState(true)
 //   const [time, setTime] = useState(0)
 
@@ -73307,6 +73311,7 @@ export default function Home() {
 //       };
 //     }
 //   }, [isStopped])
+
 
 //   return <div className='flex flex-col items-center gap-5 w-screen h-[800px] bg-slate-950 justify-center'>
 //     <div className="flex">
